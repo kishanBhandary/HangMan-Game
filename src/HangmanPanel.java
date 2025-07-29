@@ -25,13 +25,11 @@ public class HangmanPanel extends JPanel {
         int width = getWidth();
         int height = getHeight();
 
-        // Base coordinates
+     
         int baseX = width / 2 - 50;
         int baseY = height - 50;
         int poleHeight = height - 100;
         int armLength = 80;
-
-        // Always draw the gallows
         drawGallows(g2d, baseX, baseY, poleHeight, armLength);
 
         // Draw hangman parts based on wrong guesses
