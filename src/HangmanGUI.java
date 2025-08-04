@@ -33,9 +33,9 @@ public class HangmanGUI extends JFrame {
     }
 
     private void initializeGUI() {
-        setTitle("Hangman game  swing Game ");
+        setTitle("Hangman Games");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout(10, 10));
+        setLayout(new BorderLayout(20, 20));
         setResizable(false);
 
         // Set modern look and feel
