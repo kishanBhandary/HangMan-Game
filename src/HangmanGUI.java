@@ -7,7 +7,7 @@ import java.util.List;
 
 public class HangmanGUI extends JFrame {
     private static final String[] WORDS = {
-};
+            };
 
     private String wordToGuess;
     private char[] guessedWord;
