@@ -7,8 +7,7 @@ import java.util.List;
 
 public class HangmanGUI extends JFrame {
     private static final String[] WORDS = {
-            "PROGRAMMING", "COMPUTER", "JAVA", "HANGMAN", "CHALLENGE",
-            "DEVELOPER", "SOFTWARE", "ALGORITHM", "DATABASE", "NETWORK","C++","JAVA"};
+           };
 
     private String wordToGuess;
     private char[] guessedWord;
