@@ -32,7 +32,7 @@ public class HangmanGUI extends JFrame {
     }
 
     private void initializeGUI() {
-        setTitle("");
+        setTitle("MINI PROJECT \u000BBATCH-05\u000B\u000B");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
         setResizable(false);
