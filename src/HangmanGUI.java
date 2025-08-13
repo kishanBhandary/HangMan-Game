@@ -32,7 +32,7 @@ public class HangmanGUI extends JFrame {
     }
 
     private void initializeGUI() {
-        setTitle("The AI-powered human behavior detection system offers a helpful way to monitor student activities in schools. By using IR cameras and deep learning models, the system can effectively detect banned behaviors like smoking and drinking in real-time. The automated alert process ensures quick intervention, improves campus safety, and lessens the need for manual supervision. This project shows how AI and computer vision can help promote discipline, keep the environment safe, and support fair and efficient monitoring in educational settings.");
+        setTitle("");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
         setResizable(false);
