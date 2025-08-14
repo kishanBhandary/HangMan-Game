@@ -32,7 +32,7 @@ public class HangmanGUI extends JFrame {
     }
 
     private void initializeGUI() {
-        setTitle("");
+        setTitle("fff");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
         setResizable(false);
@@ -52,18 +52,13 @@ public class HangmanGUI extends JFrame {
     }
 
     private void createComponents() {
-        // Hangman drawing panel
         hangmanPanel = new HangmanPanel();
         hangmanPanel.setPreferredSize(new Dimension(300, 350));
         hangmanPanel.setBorder(BorderFactory.createTitledBorder("Hangman"));
-
-        // Word display
         wordLabel = new JLabel("", SwingConstants.CENTER);
         wordLabel.setFont(new Font("Monospaced", Font.BOLD, 24));
         wordLabel.setBorder(BorderFactory.createTitledBorder("Word"));
         wordLabel.setPreferredSize(new Dimension(400, 80));
-
-        // Status label
         statusLabel = new JLabel("Welcome to Hangman! Guess the word.", SwingConstants.CENTER);
         statusLabel.setFont(new Font("Arial", Font.PLAIN, 14));
         statusLabel.setForeground(Color.BLUE);
@@ -76,31 +71,23 @@ public class HangmanGUI extends JFrame {
         guessField = new JTextField(2);
         guessField.setFont(new Font("Arial", Font.BOLD, 16));
         guessField.setHorizontalAlignment(JTextField.CENTER);
-
         guessButton = new JButton("Guess");
         guessButton.setFont(new Font("Arial", Font.BOLD, 14));
         guessButton.setBackground(new Color(70, 130, 180));
         guessButton.setForeground(Color.WHITE);
-
         newGameButton = new JButton("New Game");
         newGameButton.setFont(new Font("Arial", Font.BOLD, 14));
         newGameButton.setBackground(new Color(34, 139, 34));
         newGameButton.setForeground(Color.WHITE);
-
-        // Create alphabet buttons
         createAlphabetButtons();
-
-        // Add action listeners
         guessButton.addActionListener(new GuessButtonListener());
         newGameButton.addActionListener(e -> startNewGame());
         guessField.addActionListener(new GuessButtonListener());
     }
-
     private void createAlphabetButtons() {
         letterButtonsPanel = new JPanel(new GridLayout(3, 9, 2, 2));
         letterButtonsPanel.setBorder(BorderFactory.createTitledBorder("Click a Letter"));
         letterButtons = new HashMap<>();
-
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for (char c : alphabet.toCharArray()) {
             JButton button = new JButton(String.valueOf(c));
@@ -112,47 +99,30 @@ public class HangmanGUI extends JFrame {
             letterButtonsPanel.add(button);
         }
     }
-
     private void layoutComponents() {
-        // Left panel - Hangman drawing
         JPanel leftPanel = new JPanel(new BorderLayout());
         leftPanel.add(hangmanPanel, BorderLayout.CENTER);
-
-        // Right panel - Game info and controls
         JPanel rightPanel = new JPanel(new BorderLayout(5, 5));
         rightPanel.setPreferredSize(new Dimension(450, 350));
-
-        // Word and status panel
         JPanel wordPanel = new JPanel(new BorderLayout(5, 5));
         wordPanel.add(wordLabel, BorderLayout.CENTER);
         wordPanel.add(statusLabel, BorderLayout.SOUTH);
-
-        // Input panel
         JPanel inputPanel = new JPanel(new FlowLayout());
         inputPanel.add(new JLabel("Enter letter:"));
         inputPanel.add(guessField);
         inputPanel.add(guessButton);
         inputPanel.add(Box.createHorizontalStrut(20));
         inputPanel.add(newGameButton);
-
-        // Guessed letters panel
         JPanel guessedPanel = new JPanel(new BorderLayout());
         guessedPanel.add(guessedLettersLabel, BorderLayout.CENTER);
-
         rightPanel.add(wordPanel, BorderLayout.NORTH);
         rightPanel.add(letterButtonsPanel, BorderLayout.CENTER);
         rightPanel.add(guessedPanel, BorderLayout.SOUTH);
-
-        // Bottom panel for input
         JPanel bottomPanel = new JPanel(new BorderLayout());
         bottomPanel.add(inputPanel, BorderLayout.CENTER);
-
-        // Main layout
         add(leftPanel, BorderLayout.WEST);
         add(rightPanel, BorderLayout.CENTER);
         add(bottomPanel, BorderLayout.SOUTH);
-
-        // Add padding
         ((JComponent) getContentPane()).setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
     }
 
