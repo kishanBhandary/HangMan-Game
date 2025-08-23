@@ -231,7 +231,7 @@ public class HangmanGUI extends JFrame {
             statusLabel.setText("💀 GAME OVER! The word was: " + wordToGuess);
             statusLabel.setForeground(Color.RED);
             disableInput();
-            showGameEndDialog("Game Oveeeeee!", "You lost! The word was: " + wordToGuess);
+            showGameEndDialog("Game Oveeeeeed!", "You lost! The word was: " + wordToGuess);
         }
     }
 
