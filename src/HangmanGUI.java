@@ -213,7 +213,7 @@ public class HangmanGUI extends JFrame {
             }
             guessedLettersLabel.setText(guessed.toString());
         } else {
-            guessedLettersLabel.setText("Guessszzzz: ");
+            guessedLettersLabel.setText("Guessszzzzz: ");
         }
 
         // Update hangman drawing
