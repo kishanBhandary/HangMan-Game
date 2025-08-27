@@ -178,7 +178,7 @@ public class HangmanGUI extends JFrame {
         }
 
         if (correctGuess) {
-            statusLabel.setText("Good guess! '" + guess + "' is in the word.");
+            statusLabel.setText("Goods guess! '" + guess + "' is in the word.");
             statusLabel.setForeground(new Color(34, 139, 34));
         } else {
             wrongGuesses++;
