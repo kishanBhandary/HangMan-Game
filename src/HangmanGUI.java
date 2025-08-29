@@ -263,7 +263,7 @@ public class HangmanGUI extends JFrame {
     private void showGameEndDialog(String title, String message) {
         int option = JOptionPane.showConfirmDialog(
                 this,
-                message + "\n\nWould you like to play againn?",
+                message + "\n\nWould you like to play againnn?",
                 title,
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE
