@@ -32,7 +32,7 @@ public class HangmanGUI extends JFrame {
     }
 
     private void initializeGUI() {
-        setTitle("Hangman Game");
+        setTitle("Hangman Gamee");
         setDefaultLookAndFeelDecorated(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
@@ -147,8 +147,6 @@ public class HangmanGUI extends JFrame {
         for (int i = 0; i < wordToGuess.length(); i++) {
             guessedWord[i] = '_';
         }
-
-        // Reset UI
         updateDisplay();
         enableAllLetterButtons();
         guessField.setEnabled(true);
@@ -168,8 +166,6 @@ public class HangmanGUI extends JFrame {
 
         guessedLetters.add(guess);
         boolean correctGuess = false;
-
-        // Check if guess is in the word
         for (int i = 0; i < wordToGuess.length(); i++) {
             if (wordToGuess.charAt(i) == guess) {
                 guessedWord[i] = guess;
