@@ -134,11 +134,9 @@ public class HangmanGUI extends JFrame {
     }
 
     private void startNewGame() {
-        // Reset game state
         wrongGuesses = 0;
         guessedLetters.clear();
 
-        // Select random word
         Random random = new Random();
         wordToGuess = WORDS[random.nextInt(WORDS.length)];
 
