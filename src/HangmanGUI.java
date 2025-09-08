@@ -89,7 +89,7 @@ public class HangmanGUI extends JFrame {
         letterButtonsPanel = new JPanel(new GridLayout(3, 9, 2, 2));
         letterButtonsPanel.setBorder(BorderFactory.createTitledBorder("Click a Letter"));
         letterButtons = new HashMap<>();
-        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZAbcdef" +
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZAbcde" +
                 "";
         for (char c : alphabet.toCharArray()) {
             JButton button = new JButton(String.valueOf(c));
